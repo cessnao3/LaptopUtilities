@@ -38,7 +38,7 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="grpIntel">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -53,7 +53,7 @@
     <property name="title">
      <string>Intel Tools</string>
     </property>
-    <widget class="QCheckBox" name="checkBox_2">
+    <widget class="QCheckBox" name="chkTurboBoost">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -66,11 +66,11 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked, allows the processor to temporarily boost to higher clock frequencies on-demand&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
-      <string>HyperBoost</string>
+      <string>Turbo Boost</string>
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
+   <widget class="QGroupBox" name="grpIdeapad">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -85,7 +85,7 @@
     <property name="title">
      <string>IdeaPad Tools</string>
     </property>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="chkBattery">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -100,9 +100,12 @@
      <property name="text">
       <string>Battery Saver</string>
      </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnQuit">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -118,7 +121,7 @@
      <string>Quit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btnAbout">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -131,10 +134,10 @@
      <string>About</string>
     </property>
    </widget>
-   <zorder>groupBox</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>groupBox_2</zorder>
-   <zorder>pushButton_2</zorder>
+   <zorder>grpIntel</zorder>
+   <zorder>btnQuit</zorder>
+   <zorder>grpIdeapad</zorder>
+   <zorder>btnAbout</zorder>
   </widget>
   <action name="actionExit">
    <property name="text">
@@ -143,5 +146,22 @@
   </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btnQuit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
